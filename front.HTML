@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles.css">
+  <title>For Pandang GPA Calculator </title>
+</head>
+<body>
+  <div class="container">
+    <h1>GPA Calculator</h1>
+    
+    <div class="course-input">
+      <h2> Current Courses</h2>
+      <div id="courses">
+        <!-- Default course input -->
+        <div class="course">
+          <input type="text" class="course-name" placeholder="Course Name">
+          <select class="grade">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="B-">B-</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="C-">C-</option>
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+          </select>
+          <input type="number" class="credits" step="0.5" placeholder="Credits">
+          <button class="remove-course">Remove</button>
+        </div>
+      </div>
+      <button id="add-course">Add Course</button>
+    </div>
+
+    <div class="input-section">
+      <label for="current-gpa">Current GPA (optional):</label>
+      <input type="number" id="current-gpa" step="0.01" placeholder="Enter current GPA">
+      <label for="total-credits">Total Credits (optional):</label>
+      <input type="number" id="total-credits" step="0.5" placeholder="Enter total credits">
+    </div>
+    <button id="calculate-gpa">Calculate GPA</button>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
