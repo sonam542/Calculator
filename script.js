@@ -86,7 +86,17 @@ document.addEventListener("DOMContentLoaded", () => {
         resultDiv.textContent = "No courses entered. GPA remains unchanged.";
       } else {
         const newGpa = totalGradePoints / (totalCredits + newCredits);
-        resultDiv.textContent = `Your new GPA is: ${newGpa.toFixed(2)}`;
+        if (newGpa > 3){
+          resultDiv.textContent = `Your new GPA is: ${newGpa.toFixed(2)} Great job`;
+        }else if (newGpa>2){
+          resultDiv.textContent = `Your new GPA is: ${newGpa.toFixed(2)}. Keep working hard you got this!`;
+        } else if (newGpa>1){
+          resultDiv.textContent = `Your new GPA is: ${newGpa.toFixed(2)}. Don't give up!`;
+        } else {
+          resultDiv.textContent = `Your new GPA is: ${newGpa.toFixed(2)}. It might be better to look for different major.`;
+        }
+        
+        
       }
     });
   
